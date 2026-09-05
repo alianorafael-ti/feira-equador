@@ -312,6 +312,13 @@ body {
   );
 }
 
+.world-link {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: block;
+  cursor: pointer;
+}
 
 /* CONTEÚDO */
 
@@ -409,9 +416,33 @@ body {
 ========================= */
 
 .chimborazo {
-  max-width: 800px;
+  max-width: 950px;
   margin: 120px auto 0;
-  text-align: center;
+
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 45px;
+  align-items: center;
+
+  text-align: left;
+}
+
+.chimborazo-image {
+  margin: 0;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.chimborazo-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chimborazo-content {
+  min-width: 0;
 }
 
 .chimborazo .eyebrow {
@@ -428,4 +459,239 @@ body {
   color: var(--muted);
   font-size: 1.15rem;
   line-height: 1.8;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+  position: relative;
+  background: #111411;
+  color: #f5f1e8;
+}
+
+.footer-colors {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  height: 6px;
+}
+
+.footer-colors span {
+  display: block;
+}
+
+.footer-yellow {
+  background: #ffdd00;
+}
+
+.footer-blue {
+  background: #034ea2;
+}
+
+.footer-red {
+  background: #ed1c24;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 70px;
+  align-items: end;
+  padding-top: 85px;
+  padding-bottom: 75px;
+}
+
+.footer-label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #ffdd00;
+}
+
+.footer-brand h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.footer-brand p {
+  margin: 18px 0 0;
+  font-size: 0.95rem;
+  color: rgba(245, 241, 232, 0.65);
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-nav a {
+  position: relative;
+  color: #f5f1e8;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.25s ease;
+}
+
+.footer-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 1px;
+  background: #ffdd00;
+  transition: width 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #ffdd00;
+}
+
+.footer-nav a:hover::after {
+  width: 100%;
+}
+
+.footer-info {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(245, 241, 232, 0.65);
+}
+
+.footer-info p {
+  margin: 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top: 1px solid rgba(245, 241, 232, 0.15);
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: rgba(245, 241, 232, 0.5);
+}
+
+.footer-bottom span {
+  margin: 0 6px;
+}
+
+.footer-developer a {
+  margin-left: 4px;
+  color: #f5f1e8;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-developer a:hover {
+  color: #ffdd00;
+}
+
+/* ========================================
+   RESPONSIVIDADE — CHIMBORAZO + FOOTER
+======================================== */
+
+@media (max-width: 800px) {
+
+  /* CHIMBORAZO */
+
+  .chimborazo {
+    max-width: 100%;
+    margin: 90px auto 0;
+    grid-template-columns: 1fr;
+    gap: 35px;
+    text-align: left;
+  }
+
+  .chimborazo-image {
+    width: 100%;
+    height: 280px;
+  }
+
+  .chimborazo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .chimborazo h3 {
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+    line-height: 0.98;
+  }
+
+  .chimborazo p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+
+  /* FOOTER */
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding-top: 65px;
+    padding-bottom: 55px;
+  }
+
+  .footer-brand h2 {
+    font-size: clamp(3.8rem, 18vw, 6rem);
+  }
+
+  .footer-nav {
+    gap: 14px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+}
+
+@media (max-width: 520px) {
+
+  .chimborazo {
+    margin-top: 70px;
+    gap: 30px;
+  }
+
+  .chimborazo-image {
+    height: 220px;
+  }
+
+  .chimborazo h3 {
+    margin: 12px 0 20px;
+  }
+
+  .footer-content {
+    padding-top: 55px;
+    padding-bottom: 45px;
+  }
+
+  .footer-bottom {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .footer-bottom p {
+    line-height: 1.6;
+  }
+
 }
