@@ -69,7 +69,14 @@ export default function Footer() {
 
             <p>
               Desenvolvido por{" "}
-              <span className="text-white/70">Click Simples</span>
+              <Link
+                href="https://clicksimples.aliano.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 transition-opacity hover:opacity-60"
+              >
+                Click Simples
+              </Link>
             </p>
           </div>
         </div>
