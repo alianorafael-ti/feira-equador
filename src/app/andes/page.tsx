@@ -14,7 +14,7 @@ export default function AndesPage() {
           alt="Paisagem montanhosa da região dos Andes no Equador"
           fill
           priority
-          className="object-cover"
+         className="object-cover object-[65%_center] md:object-center"
         />
 
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-black/10" />
