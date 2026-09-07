@@ -10,11 +10,12 @@ export default function AndesPage() {
       {/* HERO */}
       <section className="relative min-h-screen overflow-hidden">
         <Image
-          src="/assets/images/andes1.jpeg"
-          alt="Paisagem montanhosa da região dos Andes no Equador"
-          fill
-          priority
-         className="object-cover object-[65%_center] md:object-center"
+  src="/assets/images/andes1.jpeg"
+  alt="Cordilheira dos Andes no Equador"
+  fill
+  priority
+  className="object-cover object-[78%_center] md:object-center"
+
         />
 
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-black/10" />
