@@ -1,6 +1,7 @@
 import Image from "next/image";
 import BackButton from "@/components/BackButton";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 
 export default function GalapagosPage() {
@@ -217,6 +218,39 @@ export default function GalapagosPage() {
       </div>
     </div>
 
+  </div>
+</section>
+
+{/* TRANSIÇÃO PARA O EQUADOR ATUAL */}
+<section className="bg-[#111411] px-6 py-20 text-[#f5f1e8] md:px-12 md:py-28">
+  <div className="mx-auto max-w-5xl">
+    <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#ffdd00]">
+      Você conheceu os quatro mundos
+    </span>
+
+    <div className="mt-6 max-w-4xl">
+      <h2 className="font-serif text-4xl leading-[1.05] md:text-6xl">
+        Mas nossa viagem
+        <br />
+        ainda não terminou.
+      </h2>
+    </div>
+
+    <div className="mt-10 max-w-2xl border-t border-white/20 pt-8">
+      <p className="text-lg leading-relaxed text-white/65">
+        Paisagens extraordinárias contam apenas uma parte da história.
+        Para conhecer um país de verdade, também precisamos olhar para a
+        realidade de quem vive nele.
+      </p>
+    </div>
+
+    <Link
+      href="/nem-tudo-sao-flores"
+      className="mt-10 inline-flex items-center gap-4 border-b border-[#ffdd00] pb-2 text-sm font-bold uppercase tracking-[0.18em] transition-opacity hover:opacity-60"
+    >
+      Continuar a viagem
+      <span aria-hidden="true">→</span>
+    </Link>
   </div>
 </section>
 <Footer />
