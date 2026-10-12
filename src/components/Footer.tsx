@@ -65,7 +65,18 @@ export default function Footer() {
 
           {/* Base */}
           <div className="mt-16 flex flex-col gap-4 border-t border-white/15 pt-6 text-xs text-white/40 md:flex-row md:items-center md:justify-between">
-            <p>AEJA Mackenzie • Feira das Nações • 2026</p>
+           <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+  <p>AEJA Mackenzie • Feira das Nações • 2026</p>
+
+  <span className="hidden md:inline">•</span>
+
+  <Link
+    href="/nossa-turma"
+    className="text-white/70 underline underline-offset-4 transition-colors hover:text-white"
+  >
+    Conheça nossa turma ↗
+  </Link>
+</div>
 
             <p>
               Desenvolvido por{" "}
